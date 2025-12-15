@@ -12,13 +12,10 @@
     font: inherit;
 }
 
-/* html {
-    color-scheme: dark light;
-} */
-
 body {
     min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 70px;
 }
 
 img,
@@ -29,15 +26,18 @@ svg {
     max-width: 100%;
 }
 
-.navbarItem a{
+a {
     text-decoration: none;
+}
+
+.navbarItem a {
     color: #000;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
 }
 
-.navbarName h1{
+.navbarName h1 {
     font-size: 2rem;
     font-weight: bold;
     background-color: #000;
@@ -46,7 +46,7 @@ svg {
     border-radius: 8px;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,10 +55,139 @@ nav{
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-footer{
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 1rem;
     font-weight: bold;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url("./assets/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: 1px solid;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.menu h2,
+.booking h2,
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.menu-card {
+    width: 350px;
+    /* padding: 24px; */
+    border: 1px solid;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 300px;
+}
+
+.menu-details {
+    padding: 10px 15px;
+}
+
+.menu-details h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menu-details p {
+    color: #7e7280;
+}
+
+.booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.booking-form input,
+.booking-form button {
+    padding: 12px;
+    border: 1px solid;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    padding: 12px;
+    border: 1px solid;
 }
