@@ -57,16 +57,16 @@ function bookingSection() {
                 <h2>Book a Table</h2>
 
                 <form class="booking-form">
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Email" required />
-                    <input type="date" required />
-                    <input type="time" required />
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="date" required />
+                <input type="time" required />
                     <input
                         type="number"
                         placeholder="Guests"
                         min="1"
                         required
-                    />
+                        />
                     <button type="submit" class="btn">Submit Booking</button>
                 </form>
             </div>
@@ -99,9 +99,13 @@ function contactSection() {
 function kontak() {
     let Name = document.getElementById("name").value;
     let Email = document.getElementById("email").value;
-    if(Name !== "" && Email !== ""){
+    if (Name !== "" && Email !== "") {
         document.getElementById("kntk").innerHTML =
-        "Terima kasih sudah Masukan Anda Atas nama "+Name+" Dengan email "+Email+ " pasti Akan Kami Baca";
+            "Terima kasih sudah Masukan Anda Atas nama " +
+            Name +
+            " Dengan email " +
+            Email +
+            " pasti Akan Kami Baca";
     }
     kntk.classList.add("contk");
 }
