@@ -123,7 +123,7 @@ function kontak() {
     let Email = document.getElementById("email").value;
     if (Name !== "" && Email !== "") {
         document.getElementById("kntk").innerHTML =
-            "Terima kasih sudah Masukan Anda Atas nama " +
+            "Terima kasih!! Pesan Anda Atas nama " +
             Name +
             " Dengan email " +
             Email +
