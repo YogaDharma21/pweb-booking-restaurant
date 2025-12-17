@@ -81,18 +81,29 @@ function contactSection() {
                 <h2>Contact Us</h2>
 
                 <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
+                    <input type="text" id="name"placeholder="Your Name" required />
+                    <input type="email" id="email"placeholder="Your Email" required />
                     <textarea
                         placeholder="Your Message"
                         rows="5"
                         required
                     ></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="button" onclick="kontak()">Send Message</button>
                 </form>
+                <p id="kntk"></p>
             </div>
         </section>`;
     return section;
+}
+
+function kontak() {
+    let Name = document.getElementById("name").value;
+    let Email = document.getElementById("email").value;
+    if(Name !== "" && Email !== ""){
+        document.getElementById("kntk").innerHTML =
+        "Terima kasih sudah Masukan Anda Atas nama "+Name+" Dengan email "+Email+ " pasti Akan Kami Baca";
+    }
+    kntk.classList.add("contk");
 }
 
 function homePage() {

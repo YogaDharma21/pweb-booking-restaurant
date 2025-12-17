@@ -111,6 +111,7 @@ nav {
 }
 
 .container h2 {
+    text-align: center;
     font-size: 1.9rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -276,7 +277,7 @@ nav {
     font-weight: 700;
 }
 
-.footer {
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -323,4 +324,15 @@ nav {
     .menu-card img {
         height: 160px;
     }
+}
+
+.contk {
+    text-align: center;
+    padding: 12px;
+    background-color: #e7f6ec;
+    color: #2ea349;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 20px auto;
+    max-width: 750px;
 }
