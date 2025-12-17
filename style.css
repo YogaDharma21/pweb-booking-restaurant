@@ -297,6 +297,17 @@ footer {
     text-align: center;
 }
 
+.Hasil {
+    text-align: center;
+    padding: 12px;
+    background-color: #e7f6ec;
+    color: #2ea349;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 20px auto;
+    max-width: 750px;
+}
+
 @media (max-width: 720px) {
     .hero {
         min-height: 48vh;

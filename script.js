@@ -55,23 +55,45 @@ function bookingSection() {
     section.innerHTML = `   <section id="booking" class="section booking">
             <div class="container">
                 <h2>Book a Table</h2>
-
                 <form class="booking-form">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Email" required />
-                <input type="date" required />
-                <input type="time" required />
+                    <input type="text" id="name" placeholder="Your Name" required />
+                    <input type="email" id="email"placeholder="Email" required />
+                    <input type="date" id="date" required />
+                    <input type="time" id="time" required />
                     <input
                         type="number"
+                        id="guests"
                         placeholder="Guests"
                         min="1"
                         required
-                        />
-                    <button type="submit" class="btn">Submit Booking</button>
+                    />
+                    <button type="button" onclick="booking()">Submit Booking</button>
                 </form>
+                <p id="hasil"></p>
             </div>
         </section>`;
     return section;
+}
+
+function booking() {
+    let Name = document.getElementById("name").value;
+    let Email = document.getElementById("email").value;
+    let Date = document.getElementById("date").value;
+    let Time = document.getElementById("time").value;
+    let Guests = document.getElementById("guests").value;
+    if (Name !== "" && Guests !== "" && Date !== "" && Time !== "") {
+        document.getElementById("hasil").innerHTML =
+            "Terima kasih sudah melakukan booking di restoran kami! <br> Anda sudah melakukan booking di restaurant kami atas nama " +
+            Name +
+            " untuk " +
+            Guests +
+            " orang.<br> Pada Tanggal " +
+            Date +
+            " pukul " +
+            Time +
+            " telah berhasil";
+    }
+    hasil.classList.add("Hasil");
 }
 
 function contactSection() {
