@@ -161,8 +161,9 @@ function contactPage() {
 function errorPage() {
     const page = document.createElement("div");
     page.innerHTML = `
-        <h2>Error Page</h2>
-        <p>Halaman error</p>`;
+            <div class="container error">
+                <h2>Error 404 Not Found</h2>
+            </div>`;
     return page;
 }
 
@@ -176,14 +177,13 @@ const route = {
 function router() {
     const hash = window.location.hash || "#/";
     const path = hash.replace("#/", "/");
-    console.log(hash);
-    try {
-        document.getElementById("app");
-        app.innerHTML = "";
-    } catch (error) {
-        app.appendChild(errorPage());
-    } finally {
+    const app = document.getElementById("app");
+    app.innerHTML = "";
+
+    if (route[path]) {
         app.appendChild(route[path]);
+    } else {
+        app.appendChild(errorPage());
     }
 }
 
